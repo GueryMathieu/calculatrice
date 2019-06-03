@@ -58,23 +58,26 @@ let $input2 = $('#input2')
 let $result = $('#result')
 let $equals = $('#egal')
 
-let x = Number($input1[0].value);
-let y = Number($input2[0].value);
+let x = Number.parseInt($input1[0].value);
+let y = Number.parseInt($input2[0].value);
+
+
 let $op = $inputOP[0].value;
-let calc = (x, $op, y);
+
 
 $equals.click(function () {
-    if ($op = '+') {
+    if ($op === '+') {
         $result[0].value = x + y;
     }
-        else if ($op = '-') {
-            $result[0].value = x - y;
-        }
-            else if ($op = '/') {
-            $result[0].value = x / y;
-        }
-                else if ($op = '*') {
-                $result[0].value = x * y;
-            }
+    if ($op === '-') {
+        $result[0].value = x - y;
+    }
+    if ($op === '/') {
+        $result[0].value = x / y;
+    }
+    if ($op === '*') {
+        $result[0].value = x * y;
+    }
+    
 
 });
