@@ -65,7 +65,8 @@ let y = Number.parseInt($input2[0].value);
 let $op = $inputOP[0].value;
 
 
-$equals.click(function () {
+
+$equals.click(function calc() {
     if ($op === '+') {
         $result[0].value = x + y;
     }
