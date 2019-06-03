@@ -5,7 +5,7 @@ let $addButton = $('#addButton');
 let a = Number($add1[0].value);
 let b = Number($add2[0].value);
 
-$addButton.click(function(){
+$addButton.click(function () {
     $addTotal[0].value = a + b;
 });
 
@@ -18,7 +18,7 @@ let $minusButton = $('#minusButton');
 let c = Number($minus1[0].value);
 let d = Number($minus2[0].value);
 
-$minusButton.click(function(){
+$minusButton.click(function () {
     $minusTotal[0].value = c - d;
 });
 
@@ -31,7 +31,7 @@ let $divButton = $('#divButton');
 let e = Number($div1[0].value);
 let f = Number($div2[0].value);
 
-$divButton.click(function(){
+$divButton.click(function () {
     $divTotal[0].value = e / f;
 });
 
@@ -44,6 +44,37 @@ let $multButton = $('#multButton');
 let g = Number($mult1[0].value);
 let h = Number($mult2[0].value);
 
-$multButton.click(function(){
+$multButton.click(function () {
     $multTotal[0].value = g * h;
+});
+
+
+// one line //
+
+
+let $input1 = $('#input1')
+let $inputOP = $('#inputOP')
+let $input2 = $('#input2')
+let $result = $('#result')
+let $equals = $('#egal')
+
+let x = Number($input1[0].value);
+let y = Number($input2[0].value);
+let $op = $inputOP[0].value;
+let calc = (x, $op, y);
+
+$equals.click(function () {
+    if ($op = '+') {
+        $result[0].value = x + y;
+    }
+        else if ($op = '-') {
+            $result[0].value = x - y;
+        }
+            else if ($op = '/') {
+            $result[0].value = x / y;
+        }
+                else if ($op = '*') {
+                $result[0].value = x * y;
+            }
+
 });
