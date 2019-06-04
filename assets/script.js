@@ -64,7 +64,13 @@ let y = Number.parseInt($input2[0].value);
 
 let $op = $inputOP[0].value;
 
+let int = setInterval(calc, 1000);
 
+function calc() {
+    let x = Number.parseInt($input1[0].value);
+    let y = Number.parseInt($input2[0].value);
+    let $op = $inputOP[0].value;
+}
 
 $equals.click(function calc() {
     if ($op === '+') {
